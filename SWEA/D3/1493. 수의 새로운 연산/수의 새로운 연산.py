@@ -2,13 +2,16 @@ T = int(input())
 
 key = {}
 key_2 = {}
-i = j = 1
-for N in range(1, 50000):
+i = j = N = 1
+while True:
     key[N] = (i, j)
     key_2[(i, j)] = N
     i,j = i -1,j+1
     if i < 1:
         i, j = j, 1
+    N += 1
+    if i == j == 300:
+        break
 
 
 result = []
